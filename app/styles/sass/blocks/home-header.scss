@@ -6,6 +6,7 @@ body, html {
   background-color: $deep;
   height: 100%;
   color: #fff;
+  padding-top: $size;
 }
 
 .top-line {
@@ -115,4 +116,74 @@ body, html {
 
 .top-line__text {
   color: rgba(#fff, .75);
+}
+
+//ASIDE
+
+.home-header__content {
+  height: 100%;
+}
+
+.home-aside {
+  background-color: $dark;
+  width: $size;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: $size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.home-aside__decoration {
+  flex: 1 0 0;
+  background-image: url('../../../images/dist/decoration.svg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-aside__soc {
+  flex: 1 0 0;
+}
+
+.soc-item {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(#fff, $border-opacity);
+  border-bottom: 1px solid transparent;
+  margin-top: -1px;
+  transition: background .5s ease-out;
+  &:last-child {
+    border-bottom: 1px solid rgba(#fff, $border-opacity);
+  }
+  img {
+    height: auto;
+    width: 15px;
+    max-height: 15px;
+    opacity: .3;
+    transition: opacity .5s ease-out;
+  }
+  &:hover {
+    background-color: $accent;
+    img{
+      opacity: 1;
+    }
+  }
+}
+
+.home-aside__share-icon {
+  background-color: $accent;
+  width: $size;
+  flex: 0 0 $size;
+  background-image: url('../../../images/dist/share-solid.svg');
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
